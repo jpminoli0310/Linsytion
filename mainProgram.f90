@@ -6,7 +6,7 @@ REAL, DIMENSION(:)  , ALLOCATABLE  :: b, x
 REAL                               :: tol
 INTEGER                            :: N,nx
 
-N=100
+N=10
 tol=0.05
 nx=3
 
