@@ -1,3 +1,0 @@
-/home/jpminoli/Documentos/linsytion/CMakeFiles/edit_cache.dir
-/home/jpminoli/Documentos/linsytion/CMakeFiles/rebuild_cache.dir
-/home/jpminoli/Documentos/linsytion/CMakeFiles/sal.out.dir

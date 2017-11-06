@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/jpminoli/Documentos/linsytion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jpminoli/Documentos/linsytion
+CMAKE_BINARY_DIR = /home/jpminoli/Documentos/linsytion/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/CMakeFiles /home/jpminoli/Documentos/linsytion/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/build/CMakeFiles /home/jpminoli/Documentos/linsytion/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,71 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sal.out
+# Target rules for targets named Example1.out
 
 # Build rule for target.
-sal.out: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sal.out
-.PHONY : sal.out
+Example1.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Example1.out
+.PHONY : Example1.out
 
 # fast build rule for target.
-sal.out/fast:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/build
-.PHONY : sal.out/fast
+Example1.out/fast:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/build
+.PHONY : Example1.out/fast
 
-Linsytion.o: Linsytion.f90.o
+Examples/Example1.o: Examples/Example1.f90.o
 
-.PHONY : Linsytion.o
-
-# target to build an object file
-Linsytion.f90.o:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/Linsytion.f90.o
-.PHONY : Linsytion.f90.o
-
-Linsytion.i: Linsytion.f90.i
-
-.PHONY : Linsytion.i
-
-# target to preprocess a source file
-Linsytion.f90.i:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/Linsytion.f90.i
-.PHONY : Linsytion.f90.i
-
-Linsytion.s: Linsytion.f90.s
-
-.PHONY : Linsytion.s
-
-# target to generate assembly for a file
-Linsytion.f90.s:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/Linsytion.f90.s
-.PHONY : Linsytion.f90.s
-
-mainProgram.o: mainProgram.f90.o
-
-.PHONY : mainProgram.o
+.PHONY : Examples/Example1.o
 
 # target to build an object file
-mainProgram.f90.o:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/mainProgram.f90.o
-.PHONY : mainProgram.f90.o
+Examples/Example1.f90.o:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/Examples/Example1.f90.o
+.PHONY : Examples/Example1.f90.o
 
-mainProgram.i: mainProgram.f90.i
+Examples/Example1.i: Examples/Example1.f90.i
 
-.PHONY : mainProgram.i
+.PHONY : Examples/Example1.i
 
 # target to preprocess a source file
-mainProgram.f90.i:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/mainProgram.f90.i
-.PHONY : mainProgram.f90.i
+Examples/Example1.f90.i:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/Examples/Example1.f90.i
+.PHONY : Examples/Example1.f90.i
 
-mainProgram.s: mainProgram.f90.s
+Examples/Example1.s: Examples/Example1.f90.s
 
-.PHONY : mainProgram.s
+.PHONY : Examples/Example1.s
 
 # target to generate assembly for a file
-mainProgram.f90.s:
-	$(MAKE) -f CMakeFiles/sal.out.dir/build.make CMakeFiles/sal.out.dir/mainProgram.f90.s
-.PHONY : mainProgram.f90.s
+Examples/Example1.f90.s:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/Examples/Example1.f90.s
+.PHONY : Examples/Example1.f90.s
+
+src/Linsytion.o: src/Linsytion.f90.o
+
+.PHONY : src/Linsytion.o
+
+# target to build an object file
+src/Linsytion.f90.o:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.o
+.PHONY : src/Linsytion.f90.o
+
+src/Linsytion.i: src/Linsytion.f90.i
+
+.PHONY : src/Linsytion.i
+
+# target to preprocess a source file
+src/Linsytion.f90.i:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.i
+.PHONY : src/Linsytion.f90.i
+
+src/Linsytion.s: src/Linsytion.f90.s
+
+.PHONY : src/Linsytion.s
+
+# target to generate assembly for a file
+src/Linsytion.f90.s:
+	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.s
+.PHONY : src/Linsytion.f90.s
 
 # Help Target
 help:
@@ -185,13 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sal.out"
-	@echo "... Linsytion.o"
-	@echo "... Linsytion.i"
-	@echo "... Linsytion.s"
-	@echo "... mainProgram.o"
-	@echo "... mainProgram.i"
-	@echo "... mainProgram.s"
+	@echo "... Example1.out"
+	@echo "... Examples/Example1.o"
+	@echo "... Examples/Example1.i"
+	@echo "... Examples/Example1.s"
+	@echo "... src/Linsytion.o"
+	@echo "... src/Linsytion.i"
+	@echo "... src/Linsytion.s"
 .PHONY : help
 
 

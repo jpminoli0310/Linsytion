@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_Fortran
-  "/home/jpminoli/Documentos/linsytion/Linsytion.f90" "/home/jpminoli/Documentos/linsytion/CMakeFiles/sal.out.dir/Linsytion.f90.o"
-  "/home/jpminoli/Documentos/linsytion/mainProgram.f90" "/home/jpminoli/Documentos/linsytion/CMakeFiles/sal.out.dir/mainProgram.f90.o"
+  "/home/jpminoli/Documentos/linsytion/Examples/Example1.f90" "/home/jpminoli/Documentos/linsytion/build/CMakeFiles/Example1.out.dir/Examples/Example1.f90.o"
+  "/home/jpminoli/Documentos/linsytion/src/Linsytion.f90" "/home/jpminoli/Documentos/linsytion/build/CMakeFiles/Example1.out.dir/src/Linsytion.f90.o"
   )
 set(CMAKE_Fortran_COMPILER_ID "GNU")
 

@@ -1,0 +1,3 @@
+/home/jpminoli/Documentos/linsytion/build/CMakeFiles/edit_cache.dir
+/home/jpminoli/Documentos/linsytion/build/CMakeFiles/rebuild_cache.dir
+/home/jpminoli/Documentos/linsytion/build/CMakeFiles/Example1.out.dir

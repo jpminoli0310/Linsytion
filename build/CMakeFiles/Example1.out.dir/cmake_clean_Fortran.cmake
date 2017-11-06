@@ -2,5 +2,5 @@
 FILE(REMOVE
   "lynsition.mod"
   "LYNSITION.mod"
-  "CMakeFiles/sal.out.dir/lynsition.mod.stamp"
+  "CMakeFiles/Example1.out.dir/lynsition.mod.stamp"
   )
