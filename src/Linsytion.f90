@@ -1,16 +1,30 @@
 !---------------------------Header-------------------------------!
-! MODULE Lynsition
+! MODULE Linsytion
 ! Libreria que contiene subrutinas para solución de sistemas de
 ! ecuaciones lineales.
 ! 
 ! AUTOR: Juan Pablo Velásquez Minoli  
 !-------------------------End Header-----------------------------!
 
-MODULE Lynsition
+MODULE Linsytion
 IMPLICIT NONE
 !        ========
 CONTAINS
 !        ========
+!----------------------conjugateGradient------------------------!
+!Genera la solución a un sistema de ecuaciones lineales de la 
+!forma Ax=b usando gradiente conjugado.
+!
+!INPUT  : A          : Matriz del sistema
+!         b          : Vector de salida del sistema
+!         cond       : Matriz de condicionamiento
+!         x          : Entradas del sistema
+!         N          : Numero de iteraciones
+!         tol        : Tolerancia de la solución
+!         nx         : Tamaño del sistema
+!
+!OUTPUT : x
+!---------------------------------------------------------------!
 	SUBROUTINE conjugateGradient(A,b,cond,x,N,tol,nx)
 		!----------------Input Variables----------------!		
 		INTEGER                   , INTENT(IN)   :: N,nx
@@ -59,13 +73,10 @@ CONTAINS
 			alpha=beta
 		END DO
 
-
-
-
 		IF(ALLOCATED( r ) )    DEALLOCATE( r )
 		IF(ALLOCATED( w ) )    DEALLOCATE( w )         
 		IF(ALLOCATED( v ) )    DEALLOCATE( v )
 		IF(ALLOCATED( u ) )    DEALLOCATE( u )
-		
 	END SUBROUTINE conjugateGradient
-END MODULE Lynsition
+!-----------------------------------------------------------!
+END MODULE Linsytion

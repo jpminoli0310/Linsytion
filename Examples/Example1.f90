@@ -1,5 +1,12 @@
+!----------------------Example1---------------------------------!
+!Programa ejemplo para el uso de la subrutina conjugateGradient
+!para la solucion de un sistema de ecuaciones lineales de la
+!la forma Ax=b
+!
+!USES   : Linsytion
+!---------------------------------------------------------------!
 PROGRAM Example1
-USE Lynsition   
+USE Linsytion   
 IMPLICIT NONE
 REAL, DIMENSION(:,:), ALLOCATABLE  :: A, cond
 REAL, DIMENSION(:)  , ALLOCATABLE  :: b, x
@@ -21,6 +28,7 @@ b     = (/ 24, 30, -24 /)
 x     = 0
 
 call conjugateGradient(A,b,cond,x,N,tol,nx)
+PRINT *, "La solución al sistema es: ",x
 
 IF(ALLOCATED( A ) )     DEALLOCATE( A )
 IF(ALLOCATED( cond ) )    DEALLOCATE( cond )         
