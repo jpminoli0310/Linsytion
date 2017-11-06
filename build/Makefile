@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Example2.out
+
+# Build rule for target.
+Example2.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Example2.out
+.PHONY : Example2.out
+
+# fast build rule for target.
+Example2.out/fast:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/build
+.PHONY : Example2.out/fast
+
+#=============================================================================
 # Target rules for targets named Example1.out
 
 # Build rule for target.
@@ -150,12 +163,40 @@ Examples/Example1.f90.s:
 	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/Examples/Example1.f90.s
 .PHONY : Examples/Example1.f90.s
 
+Examples/Example2.o: Examples/Example2.f90.o
+
+.PHONY : Examples/Example2.o
+
+# target to build an object file
+Examples/Example2.f90.o:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/Examples/Example2.f90.o
+.PHONY : Examples/Example2.f90.o
+
+Examples/Example2.i: Examples/Example2.f90.i
+
+.PHONY : Examples/Example2.i
+
+# target to preprocess a source file
+Examples/Example2.f90.i:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/Examples/Example2.f90.i
+.PHONY : Examples/Example2.f90.i
+
+Examples/Example2.s: Examples/Example2.f90.s
+
+.PHONY : Examples/Example2.s
+
+# target to generate assembly for a file
+Examples/Example2.f90.s:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/Examples/Example2.f90.s
+.PHONY : Examples/Example2.f90.s
+
 src/Linsytion.o: src/Linsytion.f90.o
 
 .PHONY : src/Linsytion.o
 
 # target to build an object file
 src/Linsytion.f90.o:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/src/Linsytion.f90.o
 	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.o
 .PHONY : src/Linsytion.f90.o
 
@@ -165,6 +206,7 @@ src/Linsytion.i: src/Linsytion.f90.i
 
 # target to preprocess a source file
 src/Linsytion.f90.i:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/src/Linsytion.f90.i
 	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.i
 .PHONY : src/Linsytion.f90.i
 
@@ -174,6 +216,7 @@ src/Linsytion.s: src/Linsytion.f90.s
 
 # target to generate assembly for a file
 src/Linsytion.f90.s:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/src/Linsytion.f90.s
 	$(MAKE) -f CMakeFiles/Example1.out.dir/build.make CMakeFiles/Example1.out.dir/src/Linsytion.f90.s
 .PHONY : src/Linsytion.f90.s
 
@@ -185,10 +228,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Example2.out"
 	@echo "... Example1.out"
 	@echo "... Examples/Example1.o"
 	@echo "... Examples/Example1.i"
 	@echo "... Examples/Example1.s"
+	@echo "... Examples/Example2.o"
+	@echo "... Examples/Example2.i"
+	@echo "... Examples/Example2.s"
 	@echo "... src/Linsytion.o"
 	@echo "... src/Linsytion.i"
 	@echo "... src/Linsytion.s"

@@ -12,7 +12,12 @@ REAL, DIMENSION(:,:), ALLOCATABLE  :: A, cond
 REAL, DIMENSION(:)  , ALLOCATABLE  :: b, x
 REAL                               :: tol
 INTEGER                            :: N,nx
+INTEGER                            :: startTime
+INTEGER                            :: endTime      
+INTEGER                            :: countRate
+REAL*8                             :: elapsedTime
 
+CALL SYSTEM_CLOCK(startTime, countRate) ! Inicia Reloj
 N=10
 tol=0.05
 nx=3
@@ -35,4 +40,10 @@ IF(ALLOCATED( cond ) )    DEALLOCATE( cond )
 IF(ALLOCATED( b ) )     DEALLOCATE( b )         
 IF(ALLOCATED( x  ) )    DEALLOCATE( x  )
 
+CALL SYSTEM_CLOCK(endTime)              ! Finaliza Reloj
+ElapsedTime= REAL(endTime - startTime) / REAL(countRate)
+
+PRINT *, '******************************************************'
+PRINT *, 'TIME', elapsedTime
+PRINT *, 'Done.'
 END PROGRAM

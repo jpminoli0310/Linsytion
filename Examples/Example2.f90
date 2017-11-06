@@ -12,8 +12,13 @@ REAL, DIMENSION(:,:), ALLOCATABLE  :: A, cond
 REAL, DIMENSION(:)  , ALLOCATABLE  :: b, x
 REAL                               :: tol
 INTEGER                            :: N,nx
+INTEGER                            :: startTime
+INTEGER                            :: endTime      
+INTEGER                            :: countRate
+REAL*8                             :: elapsedTime
 
-N=10
+CALL SYSTEM_CLOCK(startTime, countRate) ! Inicia Reloj
+N=3
 tol=0.05
 nx=3
 
@@ -27,7 +32,7 @@ cond  = RESHAPE((/ 1, 0, 0, 0, 1, 0, 0, 0, 1 /),SHAPE=(/nx,nx/))
 b     = (/ 24, 30, -24 /)
 x     = 0
 
-call conjugateGradient(A,b,cond,x,N,tol,nx)
+call conjugateGradientPara(A,b,cond,x,N,tol,nx)
 PRINT *, "La solución al sistema es: ",x
 
 IF(ALLOCATED( A ) )     DEALLOCATE( A )
@@ -35,4 +40,10 @@ IF(ALLOCATED( cond ) )    DEALLOCATE( cond )
 IF(ALLOCATED( b ) )     DEALLOCATE( b )         
 IF(ALLOCATED( x  ) )    DEALLOCATE( x  )
 
+CALL SYSTEM_CLOCK(endTime)              ! Finaliza Reloj
+ElapsedTime= REAL(endTime - startTime) / REAL(countRate)
+
+PRINT *, '******************************************************'
+PRINT *, 'TIME', elapsedTime
+PRINT *, 'Done.'
 END PROGRAM

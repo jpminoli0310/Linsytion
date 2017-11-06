@@ -60,6 +60,44 @@ CMAKE_SOURCE_DIR = /home/jpminoli/Documentos/linsytion
 CMAKE_BINARY_DIR = /home/jpminoli/Documentos/linsytion/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/Example2.out.dir
+
+# All Build rule for target.
+CMakeFiles/Example2.out.dir/all:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/depend
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/requires
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jpminoli/Documentos/linsytion/build/CMakeFiles --progress-num=4,5,6 "Built target Example2.out"
+.PHONY : CMakeFiles/Example2.out.dir/all
+
+# Include target in all.
+all: CMakeFiles/Example2.out.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Example2.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Example2.out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jpminoli/Documentos/linsytion/build/CMakeFiles 0
+.PHONY : CMakeFiles/Example2.out.dir/rule
+
+# Convenience name for target.
+Example2.out: CMakeFiles/Example2.out.dir/rule
+
+.PHONY : Example2.out
+
+# clean rule for target.
+CMakeFiles/Example2.out.dir/clean:
+	$(MAKE) -f CMakeFiles/Example2.out.dir/build.make CMakeFiles/Example2.out.dir/clean
+.PHONY : CMakeFiles/Example2.out.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Example2.out.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Example1.out.dir
 
 # All Build rule for target.
